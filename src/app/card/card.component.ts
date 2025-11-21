@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class CardComponent {
   // @ts-ignore
   plano: any = {
-    infos: undefined
+    infos: {
+      tipo: 'Simples',
+      preco: 100
+    }
   };
 }
