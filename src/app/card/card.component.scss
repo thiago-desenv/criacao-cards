@@ -21,6 +21,11 @@
   }
 }
 
+// Override para a cor do track ativo do slider dentro do componente de card
 :host ::ng-deep mat-slider .mdc-slider__track--active_fill {
     border-color: black !important
+}
+
+.global {
+  background-color: red;
 }
