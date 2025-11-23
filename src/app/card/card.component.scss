@@ -26,6 +26,10 @@
     border-color: black !important
 }
 
-.card-cancel-button {
-  background-color: yellow !important;
+.emulated {
+  background-color: red
+}
+
+::ng-deep .emulated_ng_deep {
+   background-color: brown
 }
