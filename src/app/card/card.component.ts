@@ -15,5 +15,5 @@ export class CardComponent {
   };
 
   @Input('planType') planType: string = '';
-  @Input() planPrice: number = 0;
+  @Input({ required: true }) planPrice: number = 0;
 }
