@@ -15,5 +15,11 @@ export class CardComponent {
   };
 
   @Input('planType') planType: string = '';
-  @Input({ required: true }) planPrice: number = 0;
+  @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
+
+  buttonClicked(valueEmitted: boolean) {
+    if(valueEmitted) {
+      console.log('buttonClicked')
+    }
+  }
 }
