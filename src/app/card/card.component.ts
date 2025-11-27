@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -13,4 +13,7 @@ export class CardComponent {
       preco: 100
     }
   };
+
+  @Input('planType') planType: string = '';
+  @Input() planPrice: number = 0;
 }

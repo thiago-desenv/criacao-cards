@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'criacao-cards';
+
+  cardPlanType = 'Simples';
+  cardPlanPrice = 100;
 }
