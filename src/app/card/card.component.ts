@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, numberAttribute, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -14,7 +14,7 @@ export class CardComponent {
     }
   };
 
-  @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
+  @Input({ required: true, alias: 'planPrice', transform: numberAttribute }) planPrice: number = 0;
   @Input({ alias: 'planType', transform: (value: string) => handlePlanType(value) }) planType: string = '';
 
   // private _planType: string = '';
