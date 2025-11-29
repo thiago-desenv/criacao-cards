@@ -15,16 +15,17 @@ export class CardComponent {
   };
 
   @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
+  @Input({ alias: 'planType', transform: (value: string) => value.toUpperCase() }) planType: string = '';
 
-  private _planType: string = '';
+  // private _planType: string = '';
 
-  @Input('planType') set planType(value: string) {
-    this._planType = value.toUpperCase();
-  }
+  // @Input('planType') set planType(value: string) {
+  //   this._planType = value.toUpperCase();
+  // }
 
-  get planType(): string {
-    return this._planType;
-  }
+  // get planType(): string {
+  //   return this._planType;
+  // }
 
   buttonClicked(valueEmitted: boolean) {
     if(valueEmitted) {
