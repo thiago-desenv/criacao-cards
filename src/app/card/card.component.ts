@@ -14,12 +14,22 @@ export class CardComponent {
     }
   };
 
-  @Input('planType') planType: string = '';
   @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
+
+  private _planType: string = '';
+
+  @Input('planType') set planType(value: string) {
+    this._planType = value.toUpperCase();
+  }
+
+  get planType(): string {
+    return this._planType;
+  }
 
   buttonClicked(valueEmitted: boolean) {
     if(valueEmitted) {
       console.log('buttonClicked')
+      console.log('planType', this.planType);
     }
   }
 }

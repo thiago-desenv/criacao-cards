@@ -10,4 +10,8 @@ export class AppComponent {
 
   cardPlanType = 'Simples';
   cardPlanPrice = 100;
+
+  handlePlanTye(meuInput: string) {
+    this.cardPlanType = meuInput;
+  }
 }
