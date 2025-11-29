@@ -15,7 +15,7 @@ export class CardComponent {
   };
 
   @Input({ required: true, alias: 'planPrice' }) planPrice: number = 0;
-  @Input({ alias: 'planType', transform: (value: string) => value.toUpperCase() }) planType: string = '';
+  @Input({ alias: 'planType', transform: (value: string) => handlePlanType(value) }) planType: string = '';
 
   // private _planType: string = '';
 
@@ -33,4 +33,9 @@ export class CardComponent {
       console.log('planType', this.planType);
     }
   }
+}
+
+function handlePlanType(value: string) {
+  console.log('handlePlanType', value);
+  return value.toUpperCase();
 }
